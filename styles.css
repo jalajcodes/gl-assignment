@@ -1,0 +1,32 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  color: blue;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80%;
+  filter: brightness(0.7);
+}
+.header__logo {
+  position: absolute;
+  filter: brightness(1);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,15 @@
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80%;
+  filter: brightness(0.7);
+  
+  &__logo {
+    position: absolute;
+    filter: brightness(1);
+  }
+
+}

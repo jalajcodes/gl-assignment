@@ -1,0 +1,12 @@
+{
+  "name": "gl-assignment",
+  "version": "1.0.0",
+  "author": "Jalaj",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass ./scss/main.scss styles.css -w"
+  },
+  "dependencies": {
+    "sass": "^1.37.0"
+  }
+}
