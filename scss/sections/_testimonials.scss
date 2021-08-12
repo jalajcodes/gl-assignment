@@ -1,0 +1,78 @@
+.testimonials {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 80px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__wrapper {
+    width: 400%;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+
+    @media screen and (min-width: 960px) {
+      justify-content: space-around;
+    }
+  }
+
+  &__testimonial {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    margin: 25px;
+    position: relative;
+
+    @media screen and (min-width: 960px) {
+      width: 700px;
+      font-size: 1.8rem;
+    }
+
+    p::before {
+      content: "\201C";
+      font-size: 5rem;
+      position: absolute;
+      top: -15px;
+      left: -25px;
+    }
+
+    p::after {
+      position: absolute;
+      font-size: 5rem;
+      content: "\201D";
+    }
+
+    h4 {
+      text-align: end;
+    }
+  }
+
+  &__control {
+    &-indicators {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      button {
+        background: #c7c7c7;
+        outline: none;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        cursor: pointer;
+        margin-left: 5px;
+        transition: 0.5s;
+
+        &.active {
+          width: 40px;
+          border-radius: 50px;
+          background: #4386de;
+        }
+      }
+    }
+  }
+}

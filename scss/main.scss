@@ -1,7 +1,8 @@
 @import "reset";
 @import "common/title";
-@import "layout/navbar";
-@import "layout/header";
-@import "layout/video";
-@import "layout/curriculum";
-@import "layout/outcome";
+@import "sections/header";
+@import "sections/video";
+@import "sections/curriculum";
+@import "sections/outcome";
+@import "sections/testimonials";
+@import "sections/footer";

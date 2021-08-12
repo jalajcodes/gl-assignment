@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -29,10 +30,6 @@ body {
   bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.nav {
-  color: blue;
 }
 
 .header {
@@ -296,6 +293,92 @@ body {
     align-self: center;
     flex: 1 0 1;
   }
+}
+.testimonials {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 80px;
+}
+.testimonials__title {
+  margin-bottom: 50px;
+}
+.testimonials__wrapper {
+  width: 400%;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: 1s;
+}
+@media screen and (min-width: 960px) {
+  .testimonials__wrapper {
+    justify-content: space-around;
+  }
+}
+.testimonials__testimonial {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  margin: 25px;
+  position: relative;
+}
+@media screen and (min-width: 960px) {
+  .testimonials__testimonial {
+    width: 700px;
+    font-size: 1.8rem;
+  }
+}
+.testimonials__testimonial p::before {
+  content: "“";
+  font-size: 5rem;
+  position: absolute;
+  top: -15px;
+  left: -25px;
+}
+.testimonials__testimonial p::after {
+  position: absolute;
+  font-size: 5rem;
+  content: "”";
+}
+.testimonials__testimonial h4 {
+  text-align: end;
+}
+.testimonials__control-indicators {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.testimonials__control-indicators button {
+  background: #c7c7c7;
+  outline: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: 0.5s;
+}
+.testimonials__control-indicators button.active {
+  width: 40px;
+  border-radius: 50px;
+  background: #4386de;
+}
+
+footer {
+  background-color: #f4f4f4;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 960px) {
+  footer {
+    padding: 50px 80px;
+  }
+}
+footer p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 24px;
 }
 
 /*# sourceMappingURL=styles.css.map */

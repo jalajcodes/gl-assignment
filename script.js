@@ -27,3 +27,19 @@ accordions.forEach((accordion) => {
 		}
 	};
 });
+
+// Slider
+
+const wrapper = document.querySelector('.testimonials__wrapper');
+const indicators = document.querySelectorAll('.testimonials__control-indicators button');
+
+let currentTestimonial = 0;
+
+indicators.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        indicators[currentTestimonial].classList.remove('active');
+        wrapper.style.marginLeft = `-${100 * i}%`;
+        item.classList.add('active');
+        currentTestimonial = i;
+    })
+})

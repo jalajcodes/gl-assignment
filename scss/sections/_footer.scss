@@ -1,0 +1,16 @@
+footer {
+  background-color: #f4f4f4;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+
+  @media screen and (min-width: 960px) {
+    padding: 50px 80px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 24px;
+  }
+}
