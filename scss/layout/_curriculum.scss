@@ -1,0 +1,76 @@
+.curriculum {
+  background-color: #ecf4ff;
+  padding: 10px 30px 50px 30px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 960px) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.curriculum__accordion {
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid rgb(173, 165, 165);
+
+  @media screen and (min-width: 960px) {
+    max-width: 1000px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: none;
+  }
+
+  &__intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    cursor: pointer;
+
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  &__content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all 0.25s ease-out;
+    color: #000000;
+    opacity: 0;
+  }
+
+  h4,
+  p {
+    margin: 0;
+    line-height: 1;
+  }
+
+  h4 {
+    color: #000;
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  p {
+    color: rgb(68, 67, 67);
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  &.accordion__active {
+    .curriculum__accordion__content {
+      padding: 0 20px 20px;
+      opacity: 1;
+    }
+  }
+}

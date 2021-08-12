@@ -1,0 +1,42 @@
+.outcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.3rem;
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin: 10px 10px 30px 10px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      background-image: url(../../assets/black-tick.svg);
+      background-repeat: no-repeat;
+      padding: 0.1em 0 1em 1.8em;
+      background-position: 0 20%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .outcome__content {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+
+    & .outcome__image {
+      align-self: center;
+      flex: 1 0 1;
+    }
+  }
+}

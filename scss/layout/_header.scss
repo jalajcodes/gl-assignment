@@ -1,15 +1,142 @@
 .header {
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../../assets/bg.jpg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../../assets/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 80%;
-  filter: brightness(0.7);
-  
-  &__logo {
-    position: absolute;
-    filter: brightness(1);
+
+  @media screen and (min-width: 960px) {
+    min-height: 90vh;
   }
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 960px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 50px 80px;
+      height: 600px;
+    }
+  }
+
+  &__logo {
+    width: 200px;
+    margin: 20px 0 10px 20px;
+  }
+}
+
+.header__form {
+  background-color: #fff;
+  margin: 20px 15px;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  order: 0;
+
+  &__title {
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #000;
+      width: 100px;
+      height: 2px;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__input {
+    font-size: 1rem;
+    align-self: stretch;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: #fff;
+    color: #757575;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid rgb(173, 165, 165);
+    border-radius: 5px;
+  }
+
+  &__consent {
+    display: flex;
+    margin: 10px auto;
+    font-size: 0.9rem;
+    color: #504d4d;
+  }
+
+  &__button {
+    text-align: center;
+    width: 200px;
+    color: #fff;
+    background-color: #196ae5;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.header__info {
+  color: #fff;
+  align-self: center;
+  margin: 15px;
+  order: 1;
+  font-size: 1.8rem;
+
+  @media screen and (min-width: 960px) {
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 1em;
+    @media screen and (min-width: 960px) {
+      font-size: 1.4em;
+    }
+  }
+
+  &__quote {
+    color: rgb(235, 226, 226);
+    font-size: 1.2rem;
+    padding-left: 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background-color: rgb(235, 226, 226);
+      left: 0;
+    }
+  }
+
+  &__duration {
+    font-size: 1.3rem;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__form {
+    order: 1;
+  }
+
+  .header__info {
+    order: 0;
+  }
 }
