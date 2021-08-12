@@ -43,7 +43,7 @@ body {
 }
 @media screen and (min-width: 960px) {
   .header {
-    min-height: 90vh;
+    min-height: 100vh;
   }
 }
 .header__content {
@@ -60,13 +60,13 @@ body {
   }
 }
 .header__logo {
-  width: 200px;
+  width: 300px;
   margin: 20px 0 10px 20px;
 }
 
 .header__form {
   background-color: #fff;
-  margin: 20px 15px;
+  margin: 50px 15px 20px 15px;
   border-radius: 10px;
   padding: 15px;
   display: flex;
@@ -185,9 +185,50 @@ body {
 }
 @media screen and (min-width: 960px) {
   .video__iframe iframe {
-    width: 70%;
+    width: 40%;
     height: 510px;
   }
+}
+.video__icons {
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .video__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.video__icons__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 150px;
+  margin: 15px 80px;
+}
+.video__icons__wrapper__icon {
+  width: 150px;
+  height: 150px;
+  background-color: #212121;
+  border-radius: 50%;
+}
+.video__icons__wrapper__icon-curriculum {
+  background: url(../../assets/curriculum.svg) no-repeat center;
+  background-color: #f7d354;
+}
+.video__icons__wrapper__icon-mentorship {
+  background: url(../../assets/mentorship.svg) no-repeat center;
+  background-color: #42c5f1;
+}
+.video__icons__wrapper__icon-career {
+  background: url(../../assets/career-assistance.svg) no-repeat center;
+  background-color: #3baa8e;
+}
+.video__icons__wrapper p {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .curriculum {
@@ -206,6 +247,7 @@ body {
 .curriculum__accordion {
   width: 100%;
   max-width: 500px;
+  position: relative;
   overflow: hidden;
   background-color: #fff;
   color: #000;
@@ -226,6 +268,13 @@ body {
   position: relative;
   padding: 20px;
   cursor: pointer;
+}
+.curriculum__accordion__intro::after {
+  content: "+";
+  position: absolute;
+  right: 22px;
+  top: 12px;
+  font-size: 2.5rem;
 }
 .curriculum__accordion__intro span {
   font-size: 2rem;
@@ -253,6 +302,13 @@ body {
   color: #444343;
   font-size: 1.4rem;
   margin: 0;
+}
+.curriculum__accordion.accordion__active .curriculum__accordion__intro::after {
+  content: "-";
+  position: absolute;
+  right: 24px;
+  top: 0px;
+  font-size: 3.5rem;
 }
 .curriculum__accordion.accordion__active .curriculum__accordion__content {
   padding: 0 20px 20px;
@@ -367,18 +423,55 @@ body {
 footer {
   background-color: #f4f4f4;
   height: 100%;
-  padding: 20px;
+  padding: 20px 20px 100px 20px;
   text-align: center;
 }
 @media screen and (min-width: 960px) {
   footer {
-    padding: 50px 80px;
+    padding: 50px 80px 100px 80px;
   }
 }
 footer p {
   margin: 0;
   font-size: 1.2rem;
   line-height: 24px;
+}
+
+.sticky-footer {
+  background-color: #260591;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+}
+.sticky-footer p {
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .sticky-footer p {
+    display: block;
+    color: #fff;
+    margin-right: 20px;
+  }
+}
+.sticky-footer button {
+  border: none;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  color: #260591;
+  cursor: pointer;
+}
+
+.visible {
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=styles.css.map */

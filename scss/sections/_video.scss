@@ -15,8 +15,55 @@
       height: 210px;
 
       @media screen and (min-width: 960px) {
-        width: 70%;
+        width: 40%;
         height: 510px;
+      }
+    }
+  }
+
+  &__icons {
+    display: none;
+
+    @media screen and (min-width: 960px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      width: 150px;
+      margin: 15px 80px;
+
+      &__icon {
+        width: 150px;
+        height: 150px;
+        background-color: #212121;
+        border-radius: 50%;
+
+        &-curriculum {
+          background: url(../../assets/curriculum.svg) no-repeat center;
+          background-color: #f7d354;
+        }
+
+        &-mentorship {
+          background: url(../../assets/mentorship.svg) no-repeat center;
+          background-color: #42c5f1;
+        }
+
+        &-career {
+          background: url(../../assets/career-assistance.svg) no-repeat center;
+          background-color: #3baa8e;
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+        font-weight: bold;
       }
     }
   }

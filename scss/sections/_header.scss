@@ -9,7 +9,7 @@
   background-position: 80%;
 
   @media screen and (min-width: 960px) {
-    min-height: 90vh;
+    min-height: 100vh;
   }
 
   &__content {
@@ -26,14 +26,14 @@
   }
 
   &__logo {
-    width: 200px;
+    width: 300px;
     margin: 20px 0 10px 20px;
   }
 }
 
 .header__form {
   background-color: #fff;
-  margin: 20px 15px;
+  margin: 50px 15px 20px 15px;
   border-radius: 10px;
   padding: 15px;
   display: flex;

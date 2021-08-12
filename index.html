@@ -15,37 +15,41 @@
           <h2 class="header__form__title">Get Started Now</h2>
           <input
             type="text"
+            name="fullname"
             placeholder="Name"
             class="header__form__input"
             required
           />
           <input
             type="email"
+            name="email"
             placeholder="Email"
             class="header__form__input"
             required
           />
           <input
-            type="number"
+            type="tel"
+            name="mobile"
             placeholder="Mobile No."
             class="header__form__input"
             required
           />
           <input
+            name="experience"
             type="text"
             placeholder="Work Experience"
             class="header__form__input"
             required
           />
-          <select class="header__form__input">
+          <select name="org" id="org" tabindex="0" class="header__form__input">
             <option>Current Organisation</option>
             <option>abc</option>
             <option>def</option>
             <option>ghi</option>
           </select>
           <div class="header__form__consent">
-            <input type="checkbox" /> I authorize a great learning
-            representative to contact me
+            <input name="consent" type="checkbox" /> I authorize a great
+            learning representative to contact me
           </div>
           <button type="submit" class="header__form__button">Apply Now</button>
         </form>
@@ -76,6 +80,33 @@
           allowfullscreen
         ></iframe>
       </div>
+
+      <div class="video__icons">
+        <div class="video__icons__wrapper">
+          <div
+            class="
+              video__icons__wrapper__icon video__icons__wrapper__icon-curriculum
+            "
+          ></div>
+          <p>Comprehensive Curriculum</p>
+        </div>
+        <div class="video__icons__wrapper">
+          <div
+            class="
+              video__icons__wrapper__icon video__icons__wrapper__icon-mentorship
+            "
+          ></div>
+          <p>Personalised Mentorship</p>
+        </div>
+        <div class="video__icons__wrapper">
+          <div
+            class="
+              video__icons__wrapper__icon video__icons__wrapper__icon-career
+            "
+          ></div>
+          <p>Dedicated Career Assistance</p>
+        </div>
+      </div>
     </section>
 
     <section class="curriculum">
@@ -84,7 +115,6 @@
       <div class="curriculum__accordion">
         <div class="curriculum__accordion__intro">
           <h4>Introduction to Data Science</h4>
-          <span>&plus;</span>
         </div>
         <div class="curriculum__accordion__content">
           <p>
@@ -99,7 +129,6 @@
       <div class="curriculum__accordion">
         <div class="curriculum__accordion__intro">
           <h4>Business Finance</h4>
-          <span>&plus;</span>
         </div>
         <div class="curriculum__accordion__content">
           <p>
@@ -113,7 +142,6 @@
       <div class="curriculum__accordion">
         <div class="curriculum__accordion__intro">
           <h4>Marketing and CRM</h4>
-          <span>&plus;</span>
         </div>
         <div class="curriculum__accordion__content">
           <p>
@@ -127,7 +155,6 @@
       <div class="curriculum__accordion">
         <div class="curriculum__accordion__intro">
           <h4>SQL Programming</h4>
-          <span>&plus;</span>
         </div>
         <div class="curriculum__accordion__content">
           <p>
@@ -141,7 +168,6 @@
       <div class="curriculum__accordion">
         <div class="curriculum__accordion__intro">
           <h4>Advance Statistics</h4>
-          <span>&plus;</span>
         </div>
         <div class="curriculum__accordion__content">
           <p>
@@ -249,6 +275,15 @@
         and much more. Over 10000 professionals have taken Great learning
         Programs and it has already delivered over 5 million hours of learning.
       </p>
+
+      <div class="sticky-footer">
+        <p>Explore this game changing opportunity</p>
+        <button
+          onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'})"
+        >
+          Apply Now
+        </button>
+      </div>
     </footer>
 
     <script src="./script.js"></script>

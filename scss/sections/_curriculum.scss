@@ -13,6 +13,7 @@
 .curriculum__accordion {
   width: 100%;
   max-width: 500px;
+  position: relative;
   overflow: hidden;
   background-color: #fff;
   color: #000;
@@ -33,6 +34,14 @@
     position: relative;
     padding: 20px;
     cursor: pointer;
+
+    &::after {
+      content: "+";
+      position: absolute;
+      right: 22px;
+      top: 12px;
+      font-size: 2.5rem;
+    }
 
     span {
       font-size: 2rem;
@@ -68,6 +77,14 @@
   }
 
   &.accordion__active {
+    & .curriculum__accordion__intro::after {
+      content: "-";
+      position: absolute;
+      right: 24px;
+      top: 0px;
+      font-size: 3.5rem;
+    }
+
     .curriculum__accordion__content {
       padding: 0 20px 20px;
       opacity: 1;
