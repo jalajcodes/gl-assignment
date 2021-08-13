@@ -30,6 +30,7 @@
           <input
             type="tel"
             name="mobile"
+            pattern="/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/"
             placeholder="Mobile No."
             class="header__form__input"
             required
@@ -42,10 +43,10 @@
             required
           />
           <select name="org" id="org" tabindex="0" class="header__form__input">
-            <option>Current Organisation</option>
-            <option>abc</option>
-            <option>def</option>
-            <option>ghi</option>
+            <option class="hidden">Current Organisation</option>
+            <option>Google</option>
+            <option>Unacademy</option>
+            <option>Uber</option>
           </select>
           <div class="header__form__consent">
             <input name="consent" type="checkbox" /> I authorize a great
