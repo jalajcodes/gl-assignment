@@ -18,16 +18,16 @@ const getFormData = () => {
   return data;
 };
 
-// submitBtn.onclick = (e) => {
-// 	e.preventDefault();
-// 	let data = getFormData();
-// 	if (data) {
-// 		localStorage.setItem('formdata', JSON.stringify(data));
-// 		alert('Form Data Saved!');
-// 	} else {
-// 		alert('Please fill all the fields!');
-// 	}
-// };
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let data = getFormData();
+  if (data) {
+    localStorage.setItem("formdata", JSON.stringify(data));
+    alert("Form Data Saved!");
+  } else {
+    alert("Please fill all the fields!");
+  }
+});
 
 const populateForm = () => {
   console.log("asasa");
@@ -41,7 +41,9 @@ const populateForm = () => {
   }
 };
 
-document.onload = populateForm();
+window.addEventListener("load", () => {
+  populateForm();
+});
 
 /*****************************************************
  * ACCORDION
@@ -65,14 +67,14 @@ accordions.forEach((accordion) => {
   const intro = accordion.querySelector(".curriculum__accordion__intro");
   const content = accordion.querySelector(".curriculum__accordion__content");
 
-  intro.onclick = () => {
+  intro.addEventListener("click", () => {
     if (content.style.maxHeight) {
       closeAccordion(accordion);
     } else {
       accordions.forEach((accordion) => closeAccordion(accordion));
       openAccordion(accordion);
     }
-  };
+  });
 });
 
 /*****************************************************
@@ -83,6 +85,8 @@ const wrapper = document.querySelector(".testimonials__wrapper");
 const indicators = document.querySelectorAll(
   ".testimonials__control-indicators button"
 );
+const controlLeft = document.querySelector(".testimonials__control-left");
+const controlRight = document.querySelector(".testimonials__control-right");
 
 const numberOfTestimonials = wrapper.children.length;
 wrapper.style.setProperty("--numberOfTestimonials", numberOfTestimonials);
@@ -97,6 +101,30 @@ const setIndicators = () => {
     }
   });
 };
+
+controlRight.addEventListener("click", () => {
+  wrapper.style.setProperty(
+    "--currentTestimonial",
+    Math.min(
+      Number(wrapper.style.getPropertyValue("--currentTestimonial")) + 1,
+      numberOfTestimonials - 1
+    )
+  );
+
+  setIndicators();
+});
+
+controlLeft.addEventListener("click", () => {
+  wrapper.style.setProperty(
+    "--currentTestimonial",
+    Math.max(
+      Number(wrapper.style.getPropertyValue("--currentTestimonial")) - 1,
+      0
+    )
+  );
+
+  setIndicators();
+});
 
 indicators.forEach((item, i) => {
   item.addEventListener("click", () => {

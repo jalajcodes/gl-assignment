@@ -32,7 +32,7 @@
 
     @media screen and (min-width: 960px) {
       width: 700px;
-      width: calc((100% / var(--numberOfTestimonials)) - 15%);
+      width: calc((100% / var(--numberOfTestimonials)) - 10%);
       font-size: 1.8rem;
     }
 
@@ -56,6 +56,30 @@
   }
 
   &__control {
+    &-left,
+    &-right {
+      display: none;
+
+      @media screen and (min-width: 960px) {
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: 0;
+        transform: translateY(-50%);
+        background: url(../../assets/arrow.png) no-repeat center;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+      }
+    }
+
+    &-right {
+      top: 60%;
+      right: 0;
+      left: unset;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
     &-indicators {
       position: absolute;
       bottom: 0;

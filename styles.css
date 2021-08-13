@@ -178,20 +178,27 @@ body {
   flex-direction: column;
 }
 .video__iframe {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 100px;
-  text-align: center;
-}
-.video__iframe iframe {
+  overflow: hidden;
+  position: relative;
   width: 90%;
-  height: 210px;
+  margin: 20px;
 }
 @media screen and (min-width: 960px) {
-  .video__iframe iframe {
-    width: 40%;
-    height: 510px;
+  .video__iframe {
+    width: 700px;
   }
+}
+.video__iframe::after {
+  padding-top: 56.25%;
+  display: block;
+  content: "";
+}
+.video__iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .video__icons {
   display: none;
@@ -210,7 +217,7 @@ body {
   justify-content: space-between;
   text-align: center;
   width: 150px;
-  margin: 15px 80px;
+  margin: 80px 150px;
 }
 .video__icons__wrapper__icon {
   width: 150px;
@@ -240,10 +247,10 @@ body {
   padding: 10px 30px 50px 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 960px) {
   .curriculum {
-    align-items: center;
     justify-content: center;
   }
 }
@@ -385,7 +392,7 @@ body {
 @media screen and (min-width: 960px) {
   .testimonials__testimonial {
     width: 700px;
-    width: calc((100% / var(--numberOfTestimonials)) - 15%);
+    width: calc((100% / var(--numberOfTestimonials)) - 10%);
     font-size: 1.8rem;
   }
 }
@@ -403,6 +410,28 @@ body {
 }
 .testimonials__testimonial h4 {
   text-align: end;
+}
+.testimonials__control-left, .testimonials__control-right {
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .testimonials__control-left, .testimonials__control-right {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    transform: translateY(-50%);
+    background: url(../../assets/arrow.png) no-repeat center;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+}
+.testimonials__control-right {
+  top: 60%;
+  right: 0;
+  left: unset;
+  transform: translateY(-50%) rotate(180deg);
 }
 .testimonials__control-indicators {
   position: absolute;
