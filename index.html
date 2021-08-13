@@ -32,8 +32,10 @@
           <input
             type="tel"
             name="mobile"
-            pattern="\+?\d+"
-            title="Please check if format is correct and it has digits only."
+            pattern="\d+"
+            minlength="10"
+            maxlength="10"
+            title="Don't add country code and make sure the number contains only 10 digits."
             placeholder="Mobile No."
             class="header__form__input"
             required
