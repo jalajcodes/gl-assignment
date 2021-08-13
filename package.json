@@ -4,9 +4,11 @@
   "author": "Jalaj",
   "license": "MIT",
   "scripts": {
-    "sass": "sass ./scss/main.scss styles.css -w"
+    "sass": "sass ./,scss/main.scss styles.css -w",
+    "minify": "uglifyjs script.js -o script.min.js"
   },
   "dependencies": {
-    "sass": "^1.37.0"
+    "sass": "^1.37.0",
+    "uglify-js": "^3.14.1"
   }
 }
